@@ -6,3 +6,6 @@ __pycache__/
 *.duckdb
 *key*.json
 .vscode/
+# Data files
+data/
+*.csv
