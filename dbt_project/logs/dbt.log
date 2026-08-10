@@ -1,0 +1,343 @@
+[0m11:33:02.917299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074c9810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107563f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107562b50>]}
+
+
+============================== 11:33:02.920598 | 1f1bd10c-5b04-4b51-8816-913bde41abad ==============================
+[0m11:33:02.920598 [info ] [MainThread]: Running with dbt=1.12.0
+[0m11:33:02.920942 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'log_path': '/Users/gyeongwonsong/credit-risk-pipeline/dbt_project/logs', 'use_colors': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'profiles_dir': '/Users/gyeongwonsong/.dbt', 'hints_enabled': 'True', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'target_path': 'None', 'quiet': 'False', 'partial_parse': 'True', 'write_json': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'introspect': 'True', 'empty': 'None'}
+[0m11:33:02.931388 [info ] [MainThread]: dbt version: 1.12.0
+[0m11:33:02.931763 [info ] [MainThread]: python version: 3.11.5
+[0m11:33:02.931976 [info ] [MainThread]: python path: /Users/gyeongwonsong/credit-risk-pipeline/.venv/bin/python
+[0m11:33:02.932135 [info ] [MainThread]: os info: macOS-13.5.2-arm64-arm-64bit
+[0m11:33:03.071277 [info ] [MainThread]: Using profiles dir at /Users/gyeongwonsong/.dbt
+[0m11:33:03.071602 [info ] [MainThread]: Using profiles.yml file at /Users/gyeongwonsong/.dbt/profiles.yml
+[0m11:33:03.071807 [info ] [MainThread]: Using dbt_project.yml file at /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/dbt_project.yml
+[0m11:33:03.073070 [info ] [MainThread]: adapter type: duckdb
+[0m11:33:03.073267 [info ] [MainThread]: adapter version: 1.11.0
+[0m11:33:03.120474 [info ] [MainThread]: Configuration:
+[0m11:33:03.120771 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:33:03.120938 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:33:03.121075 [info ] [MainThread]: Required dependencies:
+[0m11:33:03.121260 [debug] [MainThread]: Executing "git --help"
+[0m11:33:03.277811 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:33:03.278374 [debug] [MainThread]: STDERR: "b''"
+[0m11:33:03.278574 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:33:03.278759 [info ] [MainThread]: Connection:
+[0m11:33:03.278953 [info ] [MainThread]:   database: credit_risk
+[0m11:33:03.279094 [info ] [MainThread]:   schema: main
+[0m11:33:03.279223 [info ] [MainThread]:   path: /Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb
+[0m11:33:03.279352 [info ] [MainThread]:   config_options: None
+[0m11:33:03.279476 [info ] [MainThread]:   extensions: None
+[0m11:33:03.279603 [info ] [MainThread]:   settings: {}
+[0m11:33:03.279728 [info ] [MainThread]:   external_root: .
+[0m11:33:03.279854 [info ] [MainThread]:   use_credential_provider: None
+[0m11:33:03.279978 [info ] [MainThread]:   attach: None
+[0m11:33:03.280099 [info ] [MainThread]:   filesystems: None
+[0m11:33:03.280219 [info ] [MainThread]:   remote: None
+[0m11:33:03.280342 [info ] [MainThread]:   plugins: None
+[0m11:33:03.280472 [info ] [MainThread]:   disable_transactions: False
+[0m11:33:03.280775 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m11:33:03.363967 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m11:33:03.399868 [debug] [MainThread]: Using duckdb connection "debug"
+[0m11:33:03.400098 [debug] [MainThread]: On debug: select 1 as id
+[0m11:33:03.400241 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:33:03.418946 [debug] [MainThread]: SQL status: OK in 0.019 seconds
+[0m11:33:03.419467 [debug] [MainThread]: On debug: Close
+[0m11:33:03.419845 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:33:03.420024 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:33:03.421439 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.54761696, "process_in_blocks": "0", "process_kernel_time": 0.219125, "process_mem_max_rss": "146178048", "process_out_blocks": "0", "process_user_time": 0.807991}
+[0m11:33:03.421694 [debug] [MainThread]: Command `dbt debug` succeeded at 11:33:03.421648 after 0.55 seconds
+[0m11:33:03.421857 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:33:03.422037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107412d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077aa850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107636890>]}
+[0m11:33:03.422249 [debug] [MainThread]: Flushing usage events
+[0m11:33:03.845592 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:33:55.352841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10773b9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077dfdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077dc110>]}
+
+
+============================== 11:33:55.355869 | f00f841d-3a61-40d1-b106-fdb10898d5d3 ==============================
+[0m11:33:55.355869 [info ] [MainThread]: Running with dbt=1.12.0
+[0m11:33:55.356211 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'target_path': 'None', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True', 'printer_width': '80', 'log_path': '/Users/gyeongwonsong/credit-risk-pipeline/dbt_project/logs', 'partial_parse': 'True', 'no_print': 'None', 'write_json': 'True', 'maximum_seed_size_mib': '1', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'profiles_dir': '/Users/gyeongwonsong/.dbt', 'cache_selected_only': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'debug': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt debug', 'log_format': 'default'}
+[0m11:33:55.364407 [info ] [MainThread]: dbt version: 1.12.0
+[0m11:33:55.364687 [info ] [MainThread]: python version: 3.11.5
+[0m11:33:55.364863 [info ] [MainThread]: python path: /Users/gyeongwonsong/credit-risk-pipeline/.venv/bin/python
+[0m11:33:55.365013 [info ] [MainThread]: os info: macOS-13.5.2-arm64-arm-64bit
+[0m11:33:55.511081 [info ] [MainThread]: Using profiles dir at /Users/gyeongwonsong/.dbt
+[0m11:33:55.511381 [info ] [MainThread]: Using profiles.yml file at /Users/gyeongwonsong/.dbt/profiles.yml
+[0m11:33:55.511538 [info ] [MainThread]: Using dbt_project.yml file at /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/dbt_project.yml
+[0m11:33:55.512665 [info ] [MainThread]: adapter type: duckdb
+[0m11:33:55.512827 [info ] [MainThread]: adapter version: 1.11.0
+[0m11:33:55.560641 [info ] [MainThread]: Configuration:
+[0m11:33:55.560950 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:33:55.561102 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:33:55.561235 [info ] [MainThread]: Required dependencies:
+[0m11:33:55.561409 [debug] [MainThread]: Executing "git --help"
+[0m11:33:55.574913 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:33:55.575466 [debug] [MainThread]: STDERR: "b''"
+[0m11:33:55.575653 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:33:55.575831 [info ] [MainThread]: Connection:
+[0m11:33:55.576061 [info ] [MainThread]:   database: credit_risk
+[0m11:33:55.576275 [info ] [MainThread]:   schema: main
+[0m11:33:55.576438 [info ] [MainThread]:   path: /Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb
+[0m11:33:55.576613 [info ] [MainThread]:   config_options: None
+[0m11:33:55.576743 [info ] [MainThread]:   extensions: None
+[0m11:33:55.576874 [info ] [MainThread]:   settings: {}
+[0m11:33:55.577002 [info ] [MainThread]:   external_root: .
+[0m11:33:55.577132 [info ] [MainThread]:   use_credential_provider: None
+[0m11:33:55.577255 [info ] [MainThread]:   attach: None
+[0m11:33:55.577384 [info ] [MainThread]:   filesystems: None
+[0m11:33:55.577598 [info ] [MainThread]:   remote: None
+[0m11:33:55.577775 [info ] [MainThread]:   plugins: None
+[0m11:33:55.577921 [info ] [MainThread]:   disable_transactions: False
+[0m11:33:55.578267 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m11:33:55.642461 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m11:33:55.662773 [debug] [MainThread]: Using duckdb connection "debug"
+[0m11:33:55.662994 [debug] [MainThread]: On debug: select 1 as id
+[0m11:33:55.663142 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:33:55.681506 [debug] [MainThread]: SQL status: OK in 0.018 seconds
+[0m11:33:55.682004 [debug] [MainThread]: On debug: Close
+[0m11:33:55.682379 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:33:55.682560 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:33:55.683971 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.37376705, "process_in_blocks": "0", "process_kernel_time": 0.199323, "process_mem_max_rss": "144916480", "process_out_blocks": "0", "process_user_time": 0.802226}
+[0m11:33:55.684229 [debug] [MainThread]: Command `dbt debug` succeeded at 11:33:55.684180 after 0.37 seconds
+[0m11:33:55.684391 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:33:55.684572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077bec10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10789bf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ec9790>]}
+[0m11:33:55.684787 [debug] [MainThread]: Flushing usage events
+[0m11:33:56.125789 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:34:01.458411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b67e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c6a5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c6ba50>]}
+
+
+============================== 11:34:01.461284 | 31b00cb2-3742-4094-915a-50a14f66e3ae ==============================
+[0m11:34:01.461284 [info ] [MainThread]: Running with dbt=1.12.0
+[0m11:34:01.461624 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'debug': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'profiles_dir': '/Users/gyeongwonsong/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'log_path': '/Users/gyeongwonsong/credit-risk-pipeline/dbt_project/logs', 'introspect': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'partial_parse': 'True', 'empty': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --select stg_loans', 'log_cache_events': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'warn_error': 'None'}
+[0m11:34:01.590266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107caca90>]}
+[0m11:34:01.617813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104acddd0>]}
+[0m11:34:01.619394 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m11:34:01.686148 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m11:34:01.686583 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:34:01.686805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e8fe90>]}
+[0m11:34:02.249018 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.credit_risk_pipeline.marts
+- models.credit_risk_pipeline.intermediate
+[0m11:34:02.250892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ca4290>]}
+[0m11:34:02.295258 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/manifest.json
+[0m11:34:02.296919 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/semantic_manifest.json
+[0m11:34:02.309750 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/osi_document.json
+[0m11:34:02.316895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10859ae10>]}
+[0m11:34:02.317146 [info ] [MainThread]: Found 1 model, 1 source, 500 macros
+[0m11:34:02.317319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108501350>]}
+[0m11:34:02.318075 [info ] [MainThread]: 
+[0m11:34:02.318243 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:34:02.318381 [info ] [MainThread]: 
+[0m11:34:02.318639 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:34:02.319044 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_credit_risk'
+[0m11:34:02.344853 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk"
+[0m11:34:02.345110 [debug] [ThreadPool]: On list_credit_risk: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_credit_risk"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"credit_risk"'
+    
+  
+  
+[0m11:34:02.345262 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:34:02.358455 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m11:34:02.360307 [debug] [ThreadPool]: On list_credit_risk: Close
+[0m11:34:02.360714 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_credit_risk, now create_credit_risk_main)
+[0m11:34:02.360973 [debug] [ThreadPool]: Creating schema "database: "credit_risk"
+schema: "main"
+"
+[0m11:34:02.364340 [debug] [ThreadPool]: Using duckdb connection "create_credit_risk_main"
+[0m11:34:02.364518 [debug] [ThreadPool]: On create_credit_risk_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_credit_risk_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='credit_risk'
+        and type != 'duckdb'
+    
+  
+[0m11:34:02.364660 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:34:02.365761 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:34:02.366344 [debug] [ThreadPool]: Using duckdb connection "create_credit_risk_main"
+[0m11:34:02.366496 [debug] [ThreadPool]: On create_credit_risk_main: BEGIN
+[0m11:34:02.366707 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:34:02.366842 [debug] [ThreadPool]: Using duckdb connection "create_credit_risk_main"
+[0m11:34:02.366973 [debug] [ThreadPool]: On create_credit_risk_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_credit_risk_main"} */
+
+    
+    
+        create schema if not exists "credit_risk"."main"
+    
+[0m11:34:02.367430 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:34:02.367779 [debug] [ThreadPool]: On create_credit_risk_main: COMMIT
+[0m11:34:02.367915 [debug] [ThreadPool]: Using duckdb connection "create_credit_risk_main"
+[0m11:34:02.368036 [debug] [ThreadPool]: On create_credit_risk_main: COMMIT
+[0m11:34:02.368224 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:34:02.368358 [debug] [ThreadPool]: On create_credit_risk_main: Close
+[0m11:34:02.368884 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_credit_risk_main, now list_credit_risk_main)
+[0m11:34:02.370900 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk_main"
+[0m11:34:02.371050 [debug] [ThreadPool]: On list_credit_risk_main: BEGIN
+[0m11:34:02.371172 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:34:02.371396 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:34:02.371529 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk_main"
+[0m11:34:02.371669 [debug] [ThreadPool]: On list_credit_risk_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_credit_risk_main"} */
+select
+      'credit_risk' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'credit_risk'
+  
+[0m11:34:02.374935 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m11:34:02.375584 [debug] [ThreadPool]: On list_credit_risk_main: ROLLBACK
+[0m11:34:02.375837 [debug] [ThreadPool]: On list_credit_risk_main: Close
+[0m11:34:02.376234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082ebc90>]}
+[0m11:34:02.376492 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:34:02.376687 [debug] [MainThread]: On master: BEGIN
+[0m11:34:02.376941 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:34:02.377222 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:34:02.377369 [debug] [MainThread]: On master: COMMIT
+[0m11:34:02.377511 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:34:02.377637 [debug] [MainThread]: On master: COMMIT
+[0m11:34:02.377832 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:34:02.377970 [debug] [MainThread]: On master: Close
+[0m11:34:02.379995 [debug] [Thread-1 (]: Began running node model.credit_risk_pipeline.stg_loans
+[0m11:34:02.380287 [info ] [Thread-1 (]: 1 of 1 START sql view model main.stg_loans ..................................... [RUN]
+[0m11:34:02.380546 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_credit_risk_main, now model.credit_risk_pipeline.stg_loans)
+[0m11:34:02.380722 [debug] [Thread-1 (]: Began compiling node model.credit_risk_pipeline.stg_loans
+[0m11:34:02.384177 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.384776 [debug] [Thread-1 (]: Began executing node model.credit_risk_pipeline.stg_loans
+[0m11:34:02.400553 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.401218 [debug] [Thread-1 (]: Using duckdb connection "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.401395 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: BEGIN
+[0m11:34:02.401548 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:34:02.401904 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:34:02.402059 [debug] [Thread-1 (]: Using duckdb connection "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.402278 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.credit_risk_pipeline.stg_loans"} */
+
+  
+  create view "credit_risk"."main"."stg_loans__dbt_tmp" as (
+    with source as (
+    select * from "credit_risk"."main"."raw_loans"
+),
+
+renamed as (
+    select
+        -- identifiers
+        id as loan_id,
+        member_id,
+
+        -- loan amounts
+        try_cast(loan_amnt as double) as loan_amount,
+        try_cast(funded_amnt as double) as funded_amount,
+        try_cast(funded_amnt_inv as double) as funded_amount_investors,
+        try_cast(installment as double) as installment,
+
+        -- loan terms
+        try_cast(trim(replace(cast(term as varchar), 'months', '')) as integer) as term_months,
+        try_cast(replace(cast(int_rate as varchar), '%', '') as double) as interest_rate,
+        grade,
+        sub_grade,
+        purpose,
+        title,
+
+        -- borrower attributes
+        emp_title as employer_title,
+        emp_length as employment_length_raw,
+        home_ownership,
+        try_cast(annual_inc as double) as annual_income,
+        verification_status,
+        addr_state as state,
+        zip_code,
+
+        -- credit profile
+        try_cast(dti as double) as dti,
+        try_cast(delinq_2yrs as integer) as delinquencies_2yrs,
+        try_strptime(earliest_cr_line, '%b-%Y') as earliest_credit_line_date,
+        try_cast(inq_last_6mths as integer) as inquiries_last_6mths,
+        try_cast(open_acc as integer) as open_accounts,
+        try_cast(pub_rec as integer) as public_records,
+        try_cast(pub_rec_bankruptcies as integer) as public_record_bankruptcies,
+        try_cast(revol_bal as double) as revolving_balance,
+        try_cast(replace(cast(revol_util as varchar), '%', '') as double) as revolving_utilization,
+        try_cast(total_acc as integer) as total_accounts,
+
+        -- loan status & performance
+        loan_status,
+        application_type,
+        try_strptime(issue_d, '%b-%Y') as issue_date,
+        try_cast(out_prncp as double) as outstanding_principal,
+        try_cast(total_pymnt as double) as total_payment,
+        try_cast(total_rec_prncp as double) as total_received_principal,
+        try_cast(total_rec_int as double) as total_received_interest,
+        try_cast(total_rec_late_fee as double) as total_received_late_fee,
+        try_cast(recoveries as double) as recoveries,
+        try_strptime(last_pymnt_d, '%b-%Y') as last_payment_date,
+        try_cast(last_pymnt_amnt as double) as last_payment_amount,
+
+        -- metadata
+        _loaded_at
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m11:34:02.404529 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:34:02.406950 [debug] [Thread-1 (]: Using duckdb connection "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.407143 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.credit_risk_pipeline.stg_loans"} */
+alter view "credit_risk"."main"."stg_loans__dbt_tmp" rename to "stg_loans"
+[0m11:34:02.407837 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:34:02.413372 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: COMMIT
+[0m11:34:02.413638 [debug] [Thread-1 (]: Using duckdb connection "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.413822 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: COMMIT
+[0m11:34:02.414589 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:34:02.416650 [debug] [Thread-1 (]: Using duckdb connection "model.credit_risk_pipeline.stg_loans"
+[0m11:34:02.416838 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.credit_risk_pipeline.stg_loans"} */
+
+      drop view if exists "credit_risk"."main"."stg_loans__dbt_backup" cascade
+    
+[0m11:34:02.417346 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:34:02.418463 [debug] [Thread-1 (]: On model.credit_risk_pipeline.stg_loans: Close
+[0m11:34:02.419529 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '31b00cb2-3742-4094-915a-50a14f66e3ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cdea90>]}
+[0m11:34:02.419842 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.stg_loans ................................ [[32mOK[0m in 0.04s]
+[0m11:34:02.420098 [debug] [Thread-1 (]: Finished running node model.credit_risk_pipeline.stg_loans
+[0m11:34:02.420682 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:34:02.420826 [debug] [MainThread]: On master: BEGIN
+[0m11:34:02.420948 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:34:02.421192 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:34:02.421328 [debug] [MainThread]: On master: COMMIT
+[0m11:34:02.421456 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:34:02.421572 [debug] [MainThread]: On master: COMMIT
+[0m11:34:02.421748 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:34:02.421880 [debug] [MainThread]: On master: Close
+[0m11:34:02.422060 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:34:02.422177 [debug] [MainThread]: Connection 'model.credit_risk_pipeline.stg_loans' was properly closed.
+[0m11:34:02.422305 [info ] [MainThread]: 
+[0m11:34:02.422445 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.10 seconds (0.10s).
+[0m11:34:02.422727 [debug] [MainThread]: Command end result
+[0m11:34:02.440237 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/manifest.json
+[0m11:34:02.441904 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/semantic_manifest.json
+[0m11:34:02.443115 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/osi_document.json
+[0m11:34:02.446331 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/run_results.json
+[0m11:34:02.446518 [info ] [MainThread]: 
+[0m11:34:02.446723 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:34:02.446872 [info ] [MainThread]: 
+[0m11:34:02.447031 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m11:34:02.448052 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.0305815, "process_in_blocks": "0", "process_kernel_time": 0.196935, "process_mem_max_rss": "162512896", "process_out_blocks": "0", "process_user_time": 1.504495}
+[0m11:34:02.448292 [debug] [MainThread]: Command `dbt run` succeeded at 11:34:02.448252 after 1.03 seconds
+[0m11:34:02.448484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c83cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107bf8210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b3ddd0>]}
+[0m11:34:02.448654 [debug] [MainThread]: Flushing usage events
+[0m11:34:02.862334 [debug] [MainThread]: An error was encountered while trying to flush usage events

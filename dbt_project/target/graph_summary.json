@@ -1,0 +1,1 @@
+{"_invocation_id": "31b00cb2-3742-4094-915a-50a14f66e3ae", "linked": {"0": {"name": "source.credit_risk_pipeline.raw.raw_loans", "type": "source", "succ": [1]}, "1": {"name": "model.credit_risk_pipeline.stg_loans", "type": "model"}}}
