@@ -17,7 +17,9 @@ charset-normalizer==3.4.9
 click==8.4.2
 colorama==0.4.6
 comm==0.2.3
+contourpy==1.3.3
 cryptography==50.0.0
+cycler==0.12.1
 daff==1.4.2
 dbt-adapters==1.24.5
 dbt-common==1.38.0
@@ -32,6 +34,7 @@ defusedxml==0.7.1
 duckdb==1.5.5
 executing==2.2.1
 fastjsonschema==2.22.1
+fonttools==4.63.0
 fqdn==1.5.1
 google-api-core==2.34.0
 google-auth==2.56.3
@@ -72,10 +75,12 @@ jupyterlab==4.6.2
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.28.0
 jupyterlab_widgets==3.0.16
+kiwisolver==1.5.0
 lark==1.3.1
 leather==0.4.1
 MarkupSafe==3.0.3
 mashumaro==3.17
+matplotlib==3.11.1
 matplotlib-inline==0.2.2
 metricflow==0.211.0
 mistune==3.3.4
@@ -98,6 +103,7 @@ parsedatetime==2.6
 parso==0.8.7
 pathspec==1.0.4
 pexpect==4.9.0
+pillow==12.3.0
 platformdirs==4.11.1
 polars==1.43.2
 polars-runtime-32==1.43.2
@@ -115,6 +121,7 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic_core==2.46.4
 Pygments==2.20.0
+pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-json-logger==4.1.0
@@ -130,6 +137,7 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
 rpds-py==2026.6.3
+seaborn==0.13.2
 Send2Trash==2.1.0
 six==1.17.0
 snowplow-tracker==1.1.0
