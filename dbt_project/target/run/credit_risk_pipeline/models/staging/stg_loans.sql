@@ -45,6 +45,7 @@ renamed as (
         try_cast(revol_bal as double) as revolving_balance,
         try_cast(replace(cast(revol_util as varchar), '%', '') as double) as revolving_utilization,
         try_cast(total_acc as integer) as total_accounts,
+        
 
         -- loan status & performance
         loan_status,
