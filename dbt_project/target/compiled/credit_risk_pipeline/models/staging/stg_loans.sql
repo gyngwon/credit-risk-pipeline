@@ -4,8 +4,8 @@ with source as (
 
 renamed as (
     select
-        -- identifiers
-        id as loan_id,
+        -- identifiers (raw hash before dedup — may still collide)
+        md5(cast(coalesce(cast(issue_d as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(loan_amnt as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(funded_amnt as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(term as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(int_rate as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(installment as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(annual_inc as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(zip_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(dti as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(emp_title as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(title as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(revol_bal as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as loan_hash,
         member_id,
 
         -- loan amounts
@@ -42,7 +42,6 @@ renamed as (
         try_cast(revol_bal as double) as revolving_balance,
         try_cast(replace(cast(revol_util as varchar), '%', '') as double) as revolving_utilization,
         try_cast(total_acc as integer) as total_accounts,
-        
 
         -- loan status & performance
         loan_status,
@@ -61,6 +60,23 @@ renamed as (
         _loaded_at
 
     from source
+),
+
+deduped as (
+    select
+        *,
+        -- Break ties among rows that hash identically: guarantees
+        -- loan_hash + dedup_rank is unique even when the source rows
+        -- are otherwise indistinguishable
+        row_number() over (partition by loan_hash order by loan_hash) as dedup_rank
+    from renamed
+),
+
+final as (
+    select
+        md5(cast(coalesce(cast(loan_hash as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(dedup_rank as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as loan_id,
+        * exclude (loan_hash, dedup_rank)
+    from deduped
 )
 
-select * from renamed
+select * from final

@@ -4,8 +4,11 @@ with source as (
 
 renamed as (
     select
-        -- identifiers
-        id as loan_id,
+        -- identifiers (raw hash before dedup — may still collide)
+        {{ dbt_utils.generate_surrogate_key([
+            'issue_d', 'loan_amnt', 'funded_amnt', 'term', 'int_rate', 'installment',
+            'annual_inc', 'zip_code', 'dti', 'emp_title', 'title', 'revol_bal'
+        ]) }} as loan_hash,
         member_id,
 
         -- loan amounts
@@ -42,7 +45,6 @@ renamed as (
         try_cast(revol_bal as double) as revolving_balance,
         try_cast(replace(cast(revol_util as varchar), '%', '') as double) as revolving_utilization,
         try_cast(total_acc as integer) as total_accounts,
-        
 
         -- loan status & performance
         loan_status,
@@ -61,6 +63,23 @@ renamed as (
         _loaded_at
 
     from source
+),
+
+deduped as (
+    select
+        *,
+        -- Break ties among rows that hash identically: guarantees
+        -- loan_hash + dedup_rank is unique even when the source rows
+        -- are otherwise indistinguishable
+        row_number() over (partition by loan_hash order by loan_hash) as dedup_rank
+    from renamed
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['loan_hash', 'dedup_rank']) }} as loan_id,
+        * exclude (loan_hash, dedup_rank)
+    from deduped
 )
 
-select * from renamed
+select * from final
