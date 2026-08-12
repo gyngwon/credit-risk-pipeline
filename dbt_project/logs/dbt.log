@@ -2991,3 +2991,1136 @@ select * from final
 [0m15:31:03.847787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a242d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0ca550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109916390>]}
 [0m15:31:03.847982 [debug] [MainThread]: Flushing usage events
 [0m15:31:04.363137 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:54:51.563973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d9abd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e93b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e93d90>]}
+
+
+============================== 10:54:51.567931 | fc208160-bf5f-488a-b8bc-29a3f9201093 ==============================
+[0m10:54:51.567931 [info ] [MainThread]: Running with dbt=1.12.0
+[0m10:54:51.568293 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_path': '/Users/gyeongwonsong/credit-risk-pipeline/dbt_project/logs', 'indirect_selection': 'eager', 'log_format': 'default', 'static_parser': 'True', 'empty': 'None', 'hints_enabled': 'True', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt test', 'introspect': 'True', 'warn_error': 'None', 'target_path': 'None', 'no_print': 'None', 'use_colors': 'True', 'write_json': 'True', 'profiles_dir': '/Users/gyeongwonsong/.dbt', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'version_check': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False'}
+[0m10:54:51.842571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ee1b90>]}
+[0m10:54:51.870390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103cf9d50>]}
+[0m10:54:51.871926 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m10:54:51.968275 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m10:54:52.043637 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m10:54:52.043984 [debug] [MainThread]: Partial parsing: added file: credit_risk_pipeline://models/marts/fct_loans.yml
+[0m10:54:52.044160 [debug] [MainThread]: Partial parsing: added file: credit_risk_pipeline://models/staging/stg_loans.yml
+[0m10:54:52.044303 [debug] [MainThread]: Partial parsing: added file: credit_risk_pipeline://tests/assert_interest_rate_in_valid_range.sql
+[0m10:54:52.044439 [debug] [MainThread]: Partial parsing: added file: credit_risk_pipeline://tests/assert_funded_not_exceeds_loan_amount.sql
+[0m10:54:52.235565 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on 'fct_loans' in
+package 'credit_risk_pipeline' (models/marts/fct_loans.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m10:54:52.235888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076ed850>]}
+[0m10:54:52.297998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ad81d0>]}
+[0m10:54:52.366786 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/manifest.json
+[0m10:54:52.369819 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/semantic_manifest.json
+[0m10:54:52.379591 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/osi_document.json
+[0m10:54:52.391545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b67ed0>]}
+[0m10:54:52.391830 [info ] [MainThread]: Found 9 models, 17 data tests, 1 source, 616 macros
+[0m10:54:52.392004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fc208160-bf5f-488a-b8bc-29a3f9201093', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b554d0>]}
+[0m10:54:52.393324 [info ] [MainThread]: 
+[0m10:54:52.393502 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:54:52.393631 [info ] [MainThread]: 
+[0m10:54:52.393882 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:54:52.396312 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_credit_risk_main'
+[0m10:54:52.428736 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk_main"
+[0m10:54:52.428972 [debug] [ThreadPool]: On list_credit_risk_main: BEGIN
+[0m10:54:52.429110 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:52.436719 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+[0m10:54:52.436898 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: BEGIN
+[0m10:54:52.437017 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m10:54:52.437125 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:52.439131 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+[0m10:54:52.439283 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_relations_without_caching
+[0m10:54:52.439396 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m10:54:52.439502 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:52.441609 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:54:52.441745 [debug] [MainThread]: Connection 'list_credit_risk_main' was properly closed.
+[0m10:54:52.441874 [info ] [MainThread]: 
+[0m10:54:52.442018 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).
+[0m10:54:52.442253 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+[0m10:54:52.449485 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 110, in exception_handler
+    yield
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 110, in exception_handler
+    yield
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 21, in macro
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/clients/jinja.py", line 83, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 43, in macro
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/clients/jinja.py", line 83, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 52, in macro
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 122, in add_query
+    self.begin()
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 245, in begin
+    self.add_begin_query()
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 228, in add_begin_query
+    return self.add_query("BEGIN", auto_begin=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+  File "/Users/gyeongwonsong/anaconda3/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 379, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 396, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 870, in test
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/task/runnable.py", line 652, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/task/runnable.py", line 585, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/task/run.py", line 1290, in before_run
+    self.populate_adapter_cache(adapter, required_schemas)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/task/runnable.py", line 551, in populate_adapter_cache
+    adapter.set_relations_cache(cachable_nodes)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 703, in set_relations_cache
+    self._relations_cache_for_schemas(relation_configs, required_schemas)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 679, in _relations_cache_for_schemas
+    for relation in future.result():
+                    ^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/anaconda3/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/anaconda3/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/gyeongwonsong/anaconda3/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt_common/utils/executor.py", line 16, in connected
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/sql/impl.py", line 194, in list_relations_without_caching
+    results = self.execute_macro(LIST_RELATIONS_MACRO_NAME, kwargs=kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+  File "/Users/gyeongwonsong/anaconda3/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gyeongwonsong/credit-risk-pipeline/.venv/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Could not set lock on file "/Users/gyeongwonsong/credit-risk-pipeline/credit_risk.duckdb": Conflicting lock is held in /private/var/folders/16/4jwzrfr95fn8lpryr55z4smh0000gn/T/AppTranslocation/1EAA0547-B312-4163-ABCD-01496E383055/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 10317) by user gyeongwonsong. See also https://duckdb.org/docs/stable/connect/concurrency
+
+[0m10:54:52.450456 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 4 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:54:52.474322 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.9725335, "process_in_blocks": "0", "process_kernel_time": 0.318155, "process_mem_max_rss": "180633600", "process_out_blocks": "0", "process_user_time": 1.975244}
+[0m10:54:52.474627 [debug] [MainThread]: Command `dbt test` failed at 10:54:52.474573 after 0.97 seconds
+[0m10:54:52.474847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d8d150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b60810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107965090>]}
+[0m10:54:52.475055 [debug] [MainThread]: Flushing usage events
+[0m10:54:52.917391 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:56:31.723251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086e3ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087dfa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087de2d0>]}
+
+
+============================== 10:56:31.726265 | a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13 ==============================
+[0m10:56:31.726265 [info ] [MainThread]: Running with dbt=1.12.0
+[0m10:56:31.726593 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'version_check': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'profiles_dir': '/Users/gyeongwonsong/.dbt', 'target_path': 'None', 'log_path': '/Users/gyeongwonsong/credit-risk-pipeline/dbt_project/logs', 'cache_selected_only': 'False', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'quiet': 'False', 'fail_fast': 'False', 'no_print': 'None', 'debug': 'False', 'hints_enabled': 'True', 'empty': 'None'}
+[0m10:56:31.947662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086e3310>]}
+[0m10:56:31.975605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105641dd0>]}
+[0m10:56:31.977042 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m10:56:32.048271 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m10:56:32.131544 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:56:32.131783 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:56:32.131919 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:56:32.136955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a20190>]}
+[0m10:56:32.219172 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/manifest.json
+[0m10:56:32.220959 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/semantic_manifest.json
+[0m10:56:32.230188 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/osi_document.json
+[0m10:56:32.241570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d6ff50>]}
+[0m10:56:32.241848 [info ] [MainThread]: Found 9 models, 17 data tests, 1 source, 616 macros
+[0m10:56:32.242013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c68090>]}
+[0m10:56:32.243286 [info ] [MainThread]: 
+[0m10:56:32.243460 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:56:32.243588 [info ] [MainThread]: 
+[0m10:56:32.243854 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:56:32.246260 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_credit_risk_main'
+[0m10:56:32.270911 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk_main"
+[0m10:56:32.271131 [debug] [ThreadPool]: On list_credit_risk_main: BEGIN
+[0m10:56:32.271261 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:56:32.283306 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m10:56:32.283546 [debug] [ThreadPool]: Using duckdb connection "list_credit_risk_main"
+[0m10:56:32.283688 [debug] [ThreadPool]: On list_credit_risk_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_credit_risk_main"} */
+select
+      'credit_risk' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'credit_risk'
+  
+[0m10:56:32.288911 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m10:56:32.289887 [debug] [ThreadPool]: On list_credit_risk_main: ROLLBACK
+[0m10:56:32.290091 [debug] [ThreadPool]: On list_credit_risk_main: Close
+[0m10:56:32.291004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0c2c4b2-126e-4b94-8efb-7dd0fc0c1c13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d30f50>]}
+[0m10:56:32.291235 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:56:32.291356 [debug] [MainThread]: On master: BEGIN
+[0m10:56:32.291469 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:56:32.291663 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:56:32.291786 [debug] [MainThread]: On master: COMMIT
+[0m10:56:32.291905 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:56:32.292012 [debug] [MainThread]: On master: COMMIT
+[0m10:56:32.292165 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:56:32.292284 [debug] [MainThread]: On master: Close
+[0m10:56:32.293975 [debug] [Thread-1 (]: Began running node test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e
+[0m10:56:32.294151 [debug] [Thread-2 (]: Began running node test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount
+[0m10:56:32.294318 [debug] [Thread-3 (]: Began running node test.credit_risk_pipeline.assert_interest_rate_in_valid_range
+[0m10:56:32.294473 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af
+[0m10:56:32.294657 [info ] [Thread-1 (]: 1 of 17 START test accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off  [RUN]
+[0m10:56:32.294885 [info ] [Thread-2 (]: 2 of 17 START test assert_funded_not_exceeds_loan_amount ....................... [RUN]
+[0m10:56:32.295101 [info ] [Thread-3 (]: 3 of 17 START test assert_interest_rate_in_valid_range ......................... [RUN]
+[0m10:56:32.295277 [info ] [Thread-4 (]: 4 of 17 START test not_null_fct_loans_borrower_id .............................. [RUN]
+[0m10:56:32.295525 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_credit_risk_main, now test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e)
+[0m10:56:32.295782 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount'
+[0m10:56:32.296008 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.credit_risk_pipeline.assert_interest_rate_in_valid_range'
+[0m10:56:32.296213 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af'
+[0m10:56:32.296382 [debug] [Thread-1 (]: Began compiling node test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e
+[0m10:56:32.296541 [debug] [Thread-2 (]: Began compiling node test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount
+[0m10:56:32.296684 [debug] [Thread-3 (]: Began compiling node test.credit_risk_pipeline.assert_interest_rate_in_valid_range
+[0m10:56:32.296820 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af
+[0m10:56:32.316449 [debug] [Thread-2 (]: Writing injected SQL for node "test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount"
+[0m10:56:32.321427 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e"
+[0m10:56:32.322184 [debug] [Thread-3 (]: Writing injected SQL for node "test.credit_risk_pipeline.assert_interest_rate_in_valid_range"
+[0m10:56:32.327080 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af"
+[0m10:56:32.327650 [debug] [Thread-3 (]: Began executing node test.credit_risk_pipeline.assert_interest_rate_in_valid_range
+[0m10:56:32.327866 [debug] [Thread-1 (]: Began executing node test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e
+[0m10:56:32.334359 [debug] [Thread-2 (]: Began executing node test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount
+[0m10:56:32.336162 [debug] [Thread-3 (]: Writing runtime sql for node "test.credit_risk_pipeline.assert_interest_rate_in_valid_range"
+[0m10:56:32.337112 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e"
+[0m10:56:32.337313 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af
+[0m10:56:32.338140 [debug] [Thread-2 (]: Writing runtime sql for node "test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount"
+[0m10:56:32.339060 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af"
+[0m10:56:32.339394 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.assert_interest_rate_in_valid_range"
+[0m10:56:32.339623 [debug] [Thread-3 (]: On test.credit_risk_pipeline.assert_interest_rate_in_valid_range: BEGIN
+[0m10:56:32.339828 [debug] [Thread-1 (]: Using duckdb connection "test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e"
+[0m10:56:32.340010 [debug] [Thread-2 (]: Using duckdb connection "test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount"
+[0m10:56:32.340184 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:56:32.340356 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af"
+[0m10:56:32.340515 [debug] [Thread-1 (]: On test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e: BEGIN
+[0m10:56:32.340675 [debug] [Thread-2 (]: On test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount: BEGIN
+[0m10:56:32.340938 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af: BEGIN
+[0m10:56:32.341102 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:56:32.341248 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.341390 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:56:32.341524 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:56:32.341728 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.assert_interest_rate_in_valid_range"
+[0m10:56:32.341898 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.342154 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.342323 [debug] [Thread-3 (]: On test.credit_risk_pipeline.assert_interest_rate_in_valid_range: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.assert_interest_rate_in_valid_range"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Interest rates outside 0-40% are almost certainly data errors
+select loan_id, interest_rate
+from "credit_risk"."main"."stg_loans"
+where interest_rate < 0 or interest_rate > 40
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.342479 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.342636 [debug] [Thread-1 (]: Using duckdb connection "test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e"
+[0m10:56:32.342787 [debug] [Thread-2 (]: Using duckdb connection "test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount"
+[0m10:56:32.342995 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af"
+[0m10:56:32.343200 [debug] [Thread-1 (]: On test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        loan_status as value_field,
+        count(*) as n_records
+
+    from "credit_risk"."main"."stg_loans"
+    group by loan_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Fully Paid','Charged Off','Current','Late (31-120 days)','Late (16-30 days)','In Grace Period','Does not meet the credit policy. Status:Fully Paid','Does not meet the credit policy. Status:Charged Off'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.343409 [debug] [Thread-2 (]: On test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- This test FAILS if it returns any rows.
+-- Funded amount should never exceed the requested loan amount.
+select loan_id, loan_amount, funded_amount
+from "credit_risk"."main"."stg_loans"
+where funded_amount > loan_amount
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.343588 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select borrower_id
+from "credit_risk"."main"."fct_loans"
+where borrower_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.344819 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.347712 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af: ROLLBACK
+[0m10:56:32.348089 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af: Close
+[0m10:56:32.348557 [info ] [Thread-4 (]: 4 of 17 PASS not_null_fct_loans_borrower_id .................................... [[32mPASS[0m in 0.05s]
+[0m10:56:32.348873 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af
+[0m10:56:32.349205 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516
+[0m10:56:32.349500 [info ] [Thread-4 (]: 5 of 17 START test not_null_fct_loans_credit_profile_id ........................ [RUN]
+[0m10:56:32.349840 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_fct_loans_borrower_id.7f432bc1af, now test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516)
+[0m10:56:32.350091 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516
+[0m10:56:32.353713 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516"
+[0m10:56:32.354610 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516
+[0m10:56:32.356313 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516"
+[0m10:56:32.357186 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516"
+[0m10:56:32.357432 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516: BEGIN
+[0m10:56:32.357920 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.358815 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.359147 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516"
+[0m10:56:32.359545 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select credit_profile_id
+from "credit_risk"."main"."fct_loans"
+where credit_profile_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.360541 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.361991 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516: ROLLBACK
+[0m10:56:32.362740 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516: Close
+[0m10:56:32.363155 [info ] [Thread-4 (]: 5 of 17 PASS not_null_fct_loans_credit_profile_id .............................. [[32mPASS[0m in 0.01s]
+[0m10:56:32.363563 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516
+[0m10:56:32.364000 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf
+[0m10:56:32.364488 [info ] [Thread-4 (]: 6 of 17 START test not_null_fct_loans_loan_amount .............................. [RUN]
+[0m10:56:32.365284 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_fct_loans_credit_profile_id.8b31495516, now test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf)
+[0m10:56:32.365567 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf
+[0m10:56:32.369517 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf"
+[0m10:56:32.371098 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf
+[0m10:56:32.372117 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf"
+[0m10:56:32.373027 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf"
+[0m10:56:32.373225 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf: BEGIN
+[0m10:56:32.373374 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.374457 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.374621 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf"
+[0m10:56:32.375178 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_amount
+from "credit_risk"."main"."fct_loans"
+where loan_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.376057 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.377246 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf: ROLLBACK
+[0m10:56:32.377916 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf: Close
+[0m10:56:32.378239 [info ] [Thread-4 (]: 6 of 17 PASS not_null_fct_loans_loan_amount .................................... [[32mPASS[0m in 0.01s]
+[0m10:56:32.378612 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf
+[0m10:56:32.378800 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330
+[0m10:56:32.378961 [info ] [Thread-4 (]: 7 of 17 START test not_null_fct_loans_loan_id .................................. [RUN]
+[0m10:56:32.379171 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_fct_loans_loan_amount.c54e712daf, now test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330)
+[0m10:56:32.379690 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330
+[0m10:56:32.384174 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330"
+[0m10:56:32.385906 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330
+[0m10:56:32.387178 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330"
+[0m10:56:32.387803 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330"
+[0m10:56:32.388147 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330: BEGIN
+[0m10:56:32.388960 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.389903 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.390157 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330"
+[0m10:56:32.390594 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_id
+from "credit_risk"."main"."fct_loans"
+where loan_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.391480 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.392908 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330: ROLLBACK
+[0m10:56:32.393393 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330: Close
+[0m10:56:32.393964 [info ] [Thread-4 (]: 7 of 17 PASS not_null_fct_loans_loan_id ........................................ [[32mPASS[0m in 0.01s]
+[0m10:56:32.394666 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330
+[0m10:56:32.394997 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2
+[0m10:56:32.395268 [info ] [Thread-4 (]: 8 of 17 START test not_null_fct_loans_product_id ............................... [RUN]
+[0m10:56:32.395652 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_fct_loans_loan_id.1067693330, now test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2)
+[0m10:56:32.396008 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2
+[0m10:56:32.400077 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2"
+[0m10:56:32.400965 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2
+[0m10:56:32.402182 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2"
+[0m10:56:32.403072 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2"
+[0m10:56:32.403465 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2: BEGIN
+[0m10:56:32.404016 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.404854 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.405291 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2"
+[0m10:56:32.405606 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "credit_risk"."main"."fct_loans"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.406654 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.408515 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2: ROLLBACK
+[0m10:56:32.409381 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2: Close
+[0m10:56:32.410068 [info ] [Thread-4 (]: 8 of 17 PASS not_null_fct_loans_product_id ..................................... [[32mPASS[0m in 0.01s]
+[0m10:56:32.410640 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2
+[0m10:56:32.411004 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15
+[0m10:56:32.411288 [info ] [Thread-4 (]: 9 of 17 START test not_null_stg_loans_interest_rate ............................ [RUN]
+[0m10:56:32.411777 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_fct_loans_product_id.f2c53cf9b2, now test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15)
+[0m10:56:32.412006 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15
+[0m10:56:32.416156 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m10:56:32.417362 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15
+[0m10:56:32.418524 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m10:56:32.419652 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m10:56:32.419947 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15: BEGIN
+[0m10:56:32.420279 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.421092 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.421658 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m10:56:32.422215 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select interest_rate
+from "credit_risk"."main"."stg_loans"
+where interest_rate is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.470395 [debug] [Thread-2 (]: SQL status: OK in 0.126 seconds
+[0m10:56:32.471271 [debug] [Thread-1 (]: SQL status: OK in 0.127 seconds
+[0m10:56:32.472098 [debug] [Thread-2 (]: On test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount: ROLLBACK
+[0m10:56:32.472281 [debug] [Thread-3 (]: SQL status: OK in 0.129 seconds
+[0m10:56:32.473146 [debug] [Thread-1 (]: On test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e: ROLLBACK
+[0m10:56:32.473784 [debug] [Thread-3 (]: On test.credit_risk_pipeline.assert_interest_rate_in_valid_range: ROLLBACK
+[0m10:56:32.474069 [debug] [Thread-2 (]: On test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount: Close
+[0m10:56:32.474262 [debug] [Thread-1 (]: On test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e: Close
+[0m10:56:32.474507 [debug] [Thread-3 (]: On test.credit_risk_pipeline.assert_interest_rate_in_valid_range: Close
+[0m10:56:32.474830 [info ] [Thread-2 (]: 2 of 17 PASS assert_funded_not_exceeds_loan_amount ............................. [[32mPASS[0m in 0.18s]
+[0m10:56:32.475211 [info ] [Thread-1 (]: 1 of 17 PASS accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off  [[32mPASS[0m in 0.18s]
+[0m10:56:32.475531 [info ] [Thread-3 (]: 3 of 17 PASS assert_interest_rate_in_valid_range ............................... [[32mPASS[0m in 0.18s]
+[0m10:56:32.475778 [debug] [Thread-2 (]: Finished running node test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount
+[0m10:56:32.476066 [debug] [Thread-1 (]: Finished running node test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e
+[0m10:56:32.476400 [debug] [Thread-3 (]: Finished running node test.credit_risk_pipeline.assert_interest_rate_in_valid_range
+[0m10:56:32.476628 [debug] [Thread-2 (]: Began running node test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba
+[0m10:56:32.476850 [debug] [Thread-1 (]: Began running node test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c
+[0m10:56:32.477067 [debug] [Thread-3 (]: Began running node test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257
+[0m10:56:32.477270 [info ] [Thread-2 (]: 10 of 17 START test not_null_stg_loans_loan_amount ............................. [RUN]
+[0m10:56:32.477481 [info ] [Thread-1 (]: 11 of 17 START test not_null_stg_loans_loan_id ................................. [RUN]
+[0m10:56:32.477675 [info ] [Thread-3 (]: 12 of 17 START test not_null_stg_loans_loan_status ............................. [RUN]
+[0m10:56:32.477926 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.assert_funded_not_exceeds_loan_amount, now test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba)
+[0m10:56:32.478143 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.accepted_values_stg_loans_loan_status__Fully_Paid__Charged_Off__Current__Late_31_120_days___Late_16_30_days___In_Grace_Period__Does_not_meet_the_credit_policy_Status_Fully_Paid__Does_not_meet_the_credit_policy_Status_Charged_Off.31eb2c075e, now test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c)
+[0m10:56:32.478388 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.assert_interest_rate_in_valid_range, now test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257)
+[0m10:56:32.478614 [debug] [Thread-2 (]: Began compiling node test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba
+[0m10:56:32.478793 [debug] [Thread-1 (]: Began compiling node test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c
+[0m10:56:32.479008 [debug] [Thread-3 (]: Began compiling node test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257
+[0m10:56:32.483006 [debug] [Thread-2 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba"
+[0m10:56:32.486330 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c"
+[0m10:56:32.489540 [debug] [Thread-3 (]: Writing injected SQL for node "test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257"
+[0m10:56:32.490056 [debug] [Thread-2 (]: Began executing node test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba
+[0m10:56:32.490841 [debug] [Thread-2 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba"
+[0m10:56:32.491266 [debug] [Thread-2 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba"
+[0m10:56:32.491435 [debug] [Thread-2 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba: BEGIN
+[0m10:56:32.491583 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:56:32.491885 [debug] [Thread-3 (]: Began executing node test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257
+[0m10:56:32.492036 [debug] [Thread-1 (]: Began executing node test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c
+[0m10:56:32.492957 [debug] [Thread-3 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257"
+[0m10:56:32.493130 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m10:56:32.493897 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c"
+[0m10:56:32.494214 [debug] [Thread-2 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba"
+[0m10:56:32.494513 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257"
+[0m10:56:32.494698 [debug] [Thread-2 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_amount
+from "credit_risk"."main"."stg_loans"
+where loan_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.494882 [debug] [Thread-1 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c"
+[0m10:56:32.495047 [debug] [Thread-3 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257: BEGIN
+[0m10:56:32.495357 [debug] [Thread-1 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c: BEGIN
+[0m10:56:32.495532 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:56:32.495702 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:56:32.496141 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.496432 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.496610 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257"
+[0m10:56:32.496836 [debug] [Thread-1 (]: Using duckdb connection "test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c"
+[0m10:56:32.497065 [debug] [Thread-3 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_status
+from "credit_risk"."main"."stg_loans"
+where loan_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.497463 [debug] [Thread-1 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_id
+from "credit_risk"."main"."stg_loans"
+where loan_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.500480 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m10:56:32.501499 [debug] [Thread-3 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257: ROLLBACK
+[0m10:56:32.501959 [debug] [Thread-3 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257: Close
+[0m10:56:32.502340 [info ] [Thread-3 (]: 12 of 17 PASS not_null_stg_loans_loan_status ................................... [[32mPASS[0m in 0.02s]
+[0m10:56:32.503195 [debug] [Thread-3 (]: Finished running node test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257
+[0m10:56:32.503883 [debug] [Thread-3 (]: Began running node test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0
+[0m10:56:32.504282 [info ] [Thread-3 (]: 13 of 17 START test relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_  [RUN]
+[0m10:56:32.504649 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_stg_loans_loan_status.6d17dcb257, now test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0)
+[0m10:56:32.504997 [debug] [Thread-3 (]: Began compiling node test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0
+[0m10:56:32.515139 [debug] [Thread-3 (]: Writing injected SQL for node "test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0"
+[0m10:56:32.516519 [debug] [Thread-3 (]: Began executing node test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0
+[0m10:56:32.517762 [debug] [Thread-3 (]: Writing runtime sql for node "test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0"
+[0m10:56:32.518599 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0"
+[0m10:56:32.518845 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0: BEGIN
+[0m10:56:32.519055 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:56:32.519995 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.520249 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0"
+[0m10:56:32.520539 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select borrower_id as from_field
+    from "credit_risk"."main"."fct_loans"
+    where borrower_id is not null
+),
+
+parent as (
+    select borrower_id as to_field
+    from "credit_risk"."main"."dim_borrowers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.535437 [debug] [Thread-3 (]: SQL status: OK in 0.015 seconds
+[0m10:56:32.536707 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0: ROLLBACK
+[0m10:56:32.537166 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0: Close
+[0m10:56:32.537674 [info ] [Thread-3 (]: 13 of 17 PASS relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_  [[32mPASS[0m in 0.03s]
+[0m10:56:32.538198 [debug] [Thread-3 (]: Finished running node test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0
+[0m10:56:32.540561 [debug] [Thread-3 (]: Began running node test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6
+[0m10:56:32.540844 [info ] [Thread-3 (]: 14 of 17 START test relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_  [RUN]
+[0m10:56:32.541149 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.relationships_fct_loans_borrower_id__borrower_id__ref_dim_borrowers_.38c46867e0, now test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6)
+[0m10:56:32.541331 [debug] [Thread-3 (]: Began compiling node test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6
+[0m10:56:32.550150 [debug] [Thread-3 (]: Writing injected SQL for node "test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6"
+[0m10:56:32.550429 [debug] [Thread-4 (]: SQL status: OK in 0.128 seconds
+[0m10:56:32.551561 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15: ROLLBACK
+[0m10:56:32.552005 [debug] [Thread-3 (]: Began executing node test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6
+[0m10:56:32.552252 [debug] [Thread-4 (]: On test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15: Close
+[0m10:56:32.553149 [debug] [Thread-3 (]: Writing runtime sql for node "test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6"
+[0m10:56:32.553601 [info ] [Thread-4 (]: 9 of 17 PASS not_null_stg_loans_interest_rate .................................. [[32mPASS[0m in 0.14s]
+[0m10:56:32.554051 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15
+[0m10:56:32.554369 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8
+[0m10:56:32.554701 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6"
+[0m10:56:32.554885 [info ] [Thread-4 (]: 15 of 17 START test relationships_fct_loans_product_id__product_id__ref_dim_loan_product_  [RUN]
+[0m10:56:32.555119 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6: BEGIN
+[0m10:56:32.555367 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.not_null_stg_loans_interest_rate.eebdca6d15, now test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8)
+[0m10:56:32.555573 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:56:32.555778 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8
+[0m10:56:32.564142 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8"
+[0m10:56:32.564368 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m10:56:32.564991 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6"
+[0m10:56:32.565185 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8
+[0m10:56:32.565399 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select credit_profile_id as from_field
+    from "credit_risk"."main"."fct_loans"
+    where credit_profile_id is not null
+),
+
+parent as (
+    select credit_profile_id as to_field
+    from "credit_risk"."main"."dim_credit_profile"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.566375 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8"
+[0m10:56:32.567078 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8"
+[0m10:56:32.567290 [debug] [Thread-4 (]: On test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8: BEGIN
+[0m10:56:32.567581 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.568088 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.568614 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8"
+[0m10:56:32.568837 [debug] [Thread-4 (]: On test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select product_id as from_field
+    from "credit_risk"."main"."fct_loans"
+    where product_id is not null
+),
+
+parent as (
+    select product_id as to_field
+    from "credit_risk"."main"."dim_loan_product"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.582402 [debug] [Thread-3 (]: SQL status: OK in 0.016 seconds
+[0m10:56:32.583688 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6: ROLLBACK
+[0m10:56:32.583909 [debug] [Thread-4 (]: SQL status: OK in 0.015 seconds
+[0m10:56:32.584856 [debug] [Thread-4 (]: On test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8: ROLLBACK
+[0m10:56:32.585056 [debug] [Thread-3 (]: On test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6: Close
+[0m10:56:32.585320 [debug] [Thread-4 (]: On test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8: Close
+[0m10:56:32.585673 [info ] [Thread-3 (]: 14 of 17 PASS relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_  [[32mPASS[0m in 0.04s]
+[0m10:56:32.586089 [info ] [Thread-4 (]: 15 of 17 PASS relationships_fct_loans_product_id__product_id__ref_dim_loan_product_  [[32mPASS[0m in 0.03s]
+[0m10:56:32.586380 [debug] [Thread-3 (]: Finished running node test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6
+[0m10:56:32.586624 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8
+[0m10:56:32.586813 [debug] [Thread-3 (]: Began running node test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329
+[0m10:56:32.587032 [debug] [Thread-4 (]: Began running node test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63
+[0m10:56:32.587203 [info ] [Thread-3 (]: 16 of 17 START test unique_fct_loans_loan_id ................................... [RUN]
+[0m10:56:32.587411 [info ] [Thread-4 (]: 17 of 17 START test unique_stg_loans_loan_id ................................... [RUN]
+[0m10:56:32.587701 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.relationships_fct_loans_credit_profile_id__credit_profile_id__ref_dim_credit_profile_.3908ec1ec6, now test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329)
+[0m10:56:32.587930 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.credit_risk_pipeline.relationships_fct_loans_product_id__product_id__ref_dim_loan_product_.bb091b2df8, now test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63)
+[0m10:56:32.588118 [debug] [Thread-3 (]: Began compiling node test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329
+[0m10:56:32.588308 [debug] [Thread-4 (]: Began compiling node test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63
+[0m10:56:32.593085 [debug] [Thread-3 (]: Writing injected SQL for node "test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329"
+[0m10:56:32.596530 [debug] [Thread-4 (]: Writing injected SQL for node "test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63"
+[0m10:56:32.597241 [debug] [Thread-3 (]: Began executing node test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329
+[0m10:56:32.598107 [debug] [Thread-3 (]: Writing runtime sql for node "test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329"
+[0m10:56:32.598417 [debug] [Thread-4 (]: Began executing node test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63
+[0m10:56:32.599241 [debug] [Thread-4 (]: Writing runtime sql for node "test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63"
+[0m10:56:32.599621 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329"
+[0m10:56:32.599834 [debug] [Thread-3 (]: On test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329: BEGIN
+[0m10:56:32.600149 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63"
+[0m10:56:32.600290 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:56:32.600451 [debug] [Thread-4 (]: On test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63: BEGIN
+[0m10:56:32.600813 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:56:32.601023 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.601189 [debug] [Thread-3 (]: Using duckdb connection "test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329"
+[0m10:56:32.601343 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m10:56:32.601518 [debug] [Thread-3 (]: On test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "credit_risk"."main"."fct_loans"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.601714 [debug] [Thread-4 (]: Using duckdb connection "test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63"
+[0m10:56:32.601984 [debug] [Thread-4 (]: On test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "credit_risk"."main"."stg_loans"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:32.614789 [debug] [Thread-2 (]: SQL status: OK in 0.119 seconds
+[0m10:56:32.615336 [debug] [Thread-3 (]: SQL status: OK in 0.013 seconds
+[0m10:56:32.617123 [debug] [Thread-2 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba: ROLLBACK
+[0m10:56:32.617334 [debug] [Thread-1 (]: SQL status: OK in 0.119 seconds
+[0m10:56:32.618056 [debug] [Thread-3 (]: On test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329: ROLLBACK
+[0m10:56:32.618798 [debug] [Thread-1 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c: ROLLBACK
+[0m10:56:32.618996 [debug] [Thread-2 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba: Close
+[0m10:56:32.619147 [debug] [Thread-3 (]: On test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329: Close
+[0m10:56:32.619292 [debug] [Thread-1 (]: On test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c: Close
+[0m10:56:32.619608 [info ] [Thread-2 (]: 10 of 17 PASS not_null_stg_loans_loan_amount ................................... [[32mPASS[0m in 0.14s]
+[0m10:56:32.619858 [info ] [Thread-3 (]: 16 of 17 PASS unique_fct_loans_loan_id ......................................... [[32mPASS[0m in 0.03s]
+[0m10:56:32.620129 [info ] [Thread-1 (]: 11 of 17 PASS not_null_stg_loans_loan_id ....................................... [[32mPASS[0m in 0.14s]
+[0m10:56:32.620402 [debug] [Thread-2 (]: Finished running node test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba
+[0m10:56:32.620643 [debug] [Thread-3 (]: Finished running node test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329
+[0m10:56:32.620865 [debug] [Thread-1 (]: Finished running node test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c
+[0m10:56:32.713208 [debug] [Thread-4 (]: SQL status: OK in 0.111 seconds
+[0m10:56:32.714207 [debug] [Thread-4 (]: On test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63: ROLLBACK
+[0m10:56:32.714496 [debug] [Thread-4 (]: On test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63: Close
+[0m10:56:32.714783 [info ] [Thread-4 (]: 17 of 17 PASS unique_stg_loans_loan_id ......................................... [[32mPASS[0m in 0.13s]
+[0m10:56:32.715024 [debug] [Thread-4 (]: Finished running node test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63
+[0m10:56:32.715710 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:56:32.715866 [debug] [MainThread]: On master: BEGIN
+[0m10:56:32.715985 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:56:32.716198 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:56:32.716318 [debug] [MainThread]: On master: COMMIT
+[0m10:56:32.716430 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:56:32.716538 [debug] [MainThread]: On master: COMMIT
+[0m10:56:32.716694 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:56:32.716806 [debug] [MainThread]: On master: Close
+[0m10:56:32.716971 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:56:32.717079 [debug] [MainThread]: Connection 'test.credit_risk_pipeline.not_null_stg_loans_loan_id.b77c69982c' was properly closed.
+[0m10:56:32.717180 [debug] [MainThread]: Connection 'test.credit_risk_pipeline.not_null_stg_loans_loan_amount.f7d94147ba' was properly closed.
+[0m10:56:32.717278 [debug] [MainThread]: Connection 'test.credit_risk_pipeline.unique_fct_loans_loan_id.b0f955a329' was properly closed.
+[0m10:56:32.717376 [debug] [MainThread]: Connection 'test.credit_risk_pipeline.unique_stg_loans_loan_id.be67636b63' was properly closed.
+[0m10:56:32.717504 [info ] [MainThread]: 
+[0m10:56:32.717638 [info ] [MainThread]: Finished running 17 data tests in 0 hours 0 minutes and 0.47 seconds (0.47s).
+[0m10:56:32.718599 [debug] [MainThread]: Command end result
+[0m10:56:32.743360 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/manifest.json
+[0m10:56:32.744626 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/semantic_manifest.json
+[0m10:56:32.745726 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/osi_document.json
+[0m10:56:32.749639 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/gyeongwonsong/credit-risk-pipeline/dbt_project/target/run_results.json
+[0m10:56:32.749810 [info ] [MainThread]: 
+[0m10:56:32.749982 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:56:32.750124 [info ] [MainThread]: 
+[0m10:56:32.750276 [info ] [MainThread]: Done. PASS=17 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=17
+[0m10:56:32.751898 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.0746619, "process_in_blocks": "0", "process_kernel_time": 0.457295, "process_mem_max_rss": "308723712", "process_out_blocks": "0", "process_user_time": 2.89488}
+[0m10:56:32.752128 [debug] [MainThread]: Command `dbt test` succeeded at 10:56:32.752092 after 1.07 seconds
+[0m10:56:32.752311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108795710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108774610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093d2710>]}
+[0m10:56:32.752484 [debug] [MainThread]: Flushing usage events
+[0m10:56:33.202347 [debug] [MainThread]: An error was encountered while trying to flush usage events
