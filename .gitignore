@@ -14,3 +14,8 @@ dbt_project/logs/
 dbt_project/dbt_packages/
 logs/
 .ipynb_checkpoints/
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/*.pid
+airflow/webserver_config.py
