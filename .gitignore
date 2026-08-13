@@ -23,3 +23,6 @@ airflow/airflow.db-wal
 airflow/airflow.db-shm
 airflow/airflow.db-wal
 airflow/airflow.db-shm
+airflow/airflow.cfg
+airflow/airflow.db-shm
+airflow/airflow.db-wal
