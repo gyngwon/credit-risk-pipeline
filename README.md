@@ -4,14 +4,6 @@ An end-to-end analytics engineering pipeline that transforms raw Lending Club lo
 Star Schema data mart, with automated data quality tests and a business-facing Power BI dashboard
 for credit risk analysis.
 
-## Why this project
-
-During a one-year Data Engineer internship at **Euronext Securities Milan**, I worked on
-production ETL pipelines and SQL data models for financial reporting. In a later internship
-in Inside Sales at a manufacturing company, I saw first-hand how customer credit limits and
-accounts-receivable follow-up work in practice — and how much value there is in turning that
-kind of raw operational data into something a risk or finance team can actually act on.
-
 This project rebuilds that workflow end-to-end using a public credit dataset: raw loan records
 become a modeled, tested data warehouse, and finally a dashboard that surfaces default risk,
 loss estimates, and risk-adjusted return by loan grade.
