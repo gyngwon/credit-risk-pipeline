@@ -19,3 +19,7 @@ airflow/airflow.cfg
 airflow/airflow.db
 airflow/*.pid
 airflow/webserver_config.py
+airflow/airflow.db-wal
+airflow/airflow.db-shm
+airflow/airflow.db-wal
+airflow/airflow.db-shm
