@@ -28,9 +28,7 @@ jobs:
       - name: Download sample data
         run: |
           mkdir -p data
-          # NOTE: the real loan.csv isn't committed to the repo (too large).
-          # CI uses a small fixture file instead — see note below.
-          cp .github/fixtures/loan_sample.csv data/loan.csv
+          cp .github/fixtures/loan_sample.csv.txt data/loan.csv
 
       - name: Run extract
         run: python extract/load_raw.py

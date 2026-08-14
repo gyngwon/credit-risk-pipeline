@@ -7,7 +7,7 @@ __pycache__/
 *key*.json
 .vscode/
 # Data files
-data/
+/data/
 *.csv
 dbt_project/target/
 dbt_project/logs/
@@ -26,3 +26,6 @@ airflow/airflow.db-shm
 airflow/airflow.cfg
 airflow/airflow.db-shm
 airflow/airflow.db-wal
+
+# Exception: keep the small CI fixture CSV even though *.csv is ignored above
+!.github/fixtures/*.csv
