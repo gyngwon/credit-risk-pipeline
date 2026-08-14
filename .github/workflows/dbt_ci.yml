@@ -1,0 +1,48 @@
+name: dbt CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "dbt_project/**"
+      - ".github/workflows/dbt_ci.yml"
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download sample data
+        run: |
+          mkdir -p data
+          # NOTE: the real loan.csv isn't committed to the repo (too large).
+          # CI uses a small fixture file instead — see note below.
+          cp .github/fixtures/loan_sample.csv data/loan.csv
+
+      - name: Run extract
+        run: python extract/load_raw.py
+
+      - name: Install dbt packages
+        working-directory: dbt_project
+        run: dbt deps
+
+      - name: Run dbt models
+        working-directory: dbt_project
+        run: dbt run
+
+      - name: Run dbt tests
+        working-directory: dbt_project
+        run: dbt test
