@@ -33,6 +33,19 @@ jobs:
       - name: Run extract
         run: python extract/load_raw.py
 
+      - name: Create dbt profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'EOF'
+          dbt_project:
+            target: ci
+            outputs:
+              ci:
+                type: duckdb
+                path: "${{ github.workspace }}/credit_risk.duckdb"
+                threads: 4
+          EOF
+
       - name: Install dbt packages
         working-directory: dbt_project
         run: dbt deps
