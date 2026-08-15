@@ -157,6 +157,6 @@ dbt test
 - [x] Intermediate layer (loan status flags, employment parsing, credit risk metrics)
 - [x] Mart layer (Star Schema: `fct_loans` + 4 dimensions)
 - [x] dbt tests (17 tests: uniqueness, referential integrity, custom business rules)
-- [ ] Airflow DAG
-- [ ] CI/CD (GitHub Actions)
+- [x] Airflow DAG
+- [x] CI/CD (GitHub Actions)
 - [ ] Power BI dashboard
