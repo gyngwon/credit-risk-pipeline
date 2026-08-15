@@ -29,3 +29,4 @@ airflow/airflow.db-wal
 
 # Exception: keep the small CI fixture CSV even though *.csv is ignored above
 !.github/fixtures/*.csv
+!powerbi_export/*.csv
