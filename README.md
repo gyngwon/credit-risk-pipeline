@@ -124,12 +124,14 @@ erDiagram
 
 ## Dashboard
 
-The Power BI dashboard surfaces three business-facing views:
-- **Portfolio Overview** — loan volume, average rate, issuance trend
-- **Risk Segmentation** — default rate by grade / sub-grade / DTI bucket
-- **Loss & Return Estimation** — estimated loan loss provision and risk-adjusted return by grade
+### Page 1 — Portfolio Overview
+![Portfolio Overview](powerbi_export/screenshots/page1_overview.png)
 
-*(dashboard link / screenshot to be added)*
+### Page 2 — Risk Segmentation
+![Risk Segmentation](powerbi_export/screenshots/page2_risk.png)
+
+### Page 3 — Loss & Return Estimation
+![Loss & Return](powerbi_export/screenshots/page3_loss.png)
 
 ## How to Reproduce
 
@@ -159,4 +161,4 @@ dbt test
 - [x] dbt tests (17 tests: uniqueness, referential integrity, custom business rules)
 - [x] Airflow DAG
 - [x] CI/CD (GitHub Actions)
-- [ ] Power BI dashboard
+- [x] Power BI dashboard
